@@ -1,5 +1,10 @@
-import AuthScreen from "@/features/auth/components/auth-screen";
+import LandingHeader from "@/components/LandingHeader";
 
 export default function Home() {
-  return <AuthScreen />;
+  return (
+    <>
+      <LandingHeader />
+      <div>anan</div>
+    </>
+  );
 }
