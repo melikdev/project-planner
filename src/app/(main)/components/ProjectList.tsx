@@ -2,10 +2,7 @@ import SingleProject from "./SingleProject";
 
 const ProjectList = () => {
   return (
-    <div className="p-10 gap-10 grid lg:grid-cols-3 lg:p-0 md:grid-cols-2">
-      <SingleProject />
-      <SingleProject />
-      <SingleProject />
+    <div className="gap-10 pb-10 grid lg:grid-cols-3 p-0 md:grid-cols-2 content-center ">
       <SingleProject />
       <SingleProject />
       <SingleProject />

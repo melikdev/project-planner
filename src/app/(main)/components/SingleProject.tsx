@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const SingleProject = () => {
   return (
-    <div className="bg-zinc-900 max-w-[370px] h-[194px] max-h-[230px] p-6 rounded-md relative">
+    <div className="dark:bg-zinc-900 max-w-[400px] h-[194px] max-h-[230px] p-6 rounded-md relative border-solid border-2">
       <Link href="/project/1">
         <div className="space-y-2">
           <h1 className="text-2xl font-bold py-2">Project name</h1>

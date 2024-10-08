@@ -8,7 +8,7 @@ import {
   UserButton,
 } from "@clerk/clerk-react";
 import { ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
-import { FolderOpenDot, Gitlab, Loader } from "lucide-react";
+import { Gitlab, Loader } from "lucide-react";
 import Link from "next/link";
 
 import ThemeToggle from "./ThemeToggle";
@@ -16,7 +16,7 @@ import { Button } from "./ui/button";
 
 const LandingHeader = () => {
   return (
-    <header className="flex justify-around items-center h-20 w-full fixed top-0 left-0 border-slate-600 px-10">
+    <header className="flex justify-around items-center h-20 w-full sticky top-0 left-0 border-slate-600 px-10">
       <div className="left flex gap-10 ">
         <div className="logo">
           <Link className="flex gap-2 items-center" href="/">

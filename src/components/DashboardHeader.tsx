@@ -14,7 +14,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center h-20 w-full border-b-2 border-slate-600 px-10">
+    <header className="flex justify-between items-center h-16 w-full border-b-2 border-slate-600 px-10">
       <div className="left flex gap-10 ">
         <div className="logo ">
           <Gitlab />

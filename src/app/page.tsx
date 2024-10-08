@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <>
       <LandingHeader />
-      <div className=""></div>
     </>
   );
 }
