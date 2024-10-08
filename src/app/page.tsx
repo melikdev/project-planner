@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <LandingHeader />
-      <div>anan</div>
+      <div className=""></div>
     </>
   );
 }
