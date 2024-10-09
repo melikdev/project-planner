@@ -6,6 +6,7 @@ import { data } from "../../mockData";
 import { useState } from "react";
 import { useParams } from "next/navigation";
 import NewWorkItemModal from "../../components/NewWorkItemModal";
+import SingleWork from "../../components/SingleWork";
 
 const Project = () => {
   const [search, setSearch] = useState("");
@@ -15,12 +16,12 @@ const Project = () => {
 
   const parsedId = parseInt(id as string);
 
-  const [project, setProject] = useState(data[parsedId - 1].properties);
-
   return (
     <div className="space-y-8">
       <div className="flex justify-between">
-        <h1 className="text-3xl font-bold">WORK ITEMS</h1>
+        <h1 className="text-3xl font-bold">
+          WORK ITEMS of {data[parsedId - 1].name}
+        </h1>
         <NewWorkItemModal />
       </div>
       <div className="flex justify-between">
@@ -45,27 +46,11 @@ const Project = () => {
           <span>Type</span>
           <span>Target Date</span>
         </div>
-        <div
-          className={`${checked ? "bg-zinc-500" : null} grid grid-cols-5 items-center text-center rounded-b-sm p-2 place-items-center border-2 relative`}
-        >
-          <input
-            onChange={() => setChecked(!checked)}
-            checked={checked}
-            className="absolute top-5 left-3 size-4 bg-red-200"
-            type="checkbox"
-          />
-          <span>{project.title}</span>
-          <span className="bg-red-500 p-2 w-20 rounded-sm">
-            {project.status}
-          </span>
-          <span className="bg-yellow-500 p-2 w-20  rounded-sm">
-            {project.priority}
-          </span>
-          <span className="bg-blue-500 p-2 w-20  rounded-sm">
-            {project.type}
-          </span>
-          <span>{project.targetDate}</span>
-        </div>
+        <SingleWork
+          checked={checked}
+          setChecked={setChecked}
+          project={data[parsedId - 1].properties}
+        />
       </div>
     </div>
   );

@@ -10,7 +10,8 @@ const NewWorkItemModal = () => {
     <div className="flex justify-center items-center z-50">
       <Button
         onClick={() => setShow(true)}
-        className="h-10 bg-blue-500 w-24 rounded-md text-white"
+        className="h-10 bg-blue-500 rounded-md text-white"
+        size="lg"
       >
         New work item
       </Button>
@@ -20,7 +21,7 @@ const NewWorkItemModal = () => {
             onClick={() => setShow(false)}
             className="fixed w-screen h-screen top-0 left-0 bg-black/50 flex justify-center items-center"
           ></div>
-          <div className="fixed top-1/1 left-1/3 bg-zinc-900 md:w-[30%] md:h-[50%]   rounded-lg ">
+          <div className="fixed top-1/1 left-1/3 dark:bg-zinc-900 bg-white md:w-[30%] md:h-[50%]   rounded-lg ">
             <XIcon
               onClick={() => setShow(false)}
               className="absolute top-4 right-4 text-white cursor-pointer"
@@ -40,7 +41,7 @@ const NewWorkItemModal = () => {
                   </div>
                   <div className="grid grid-cols-3 gap-2">
                     <select
-                      className="bg-zinc-800 text-white"
+                      className="bg-zinc-800 p-2 rounded-md text-white"
                       name="status"
                       id="status"
                     >
@@ -49,7 +50,7 @@ const NewWorkItemModal = () => {
                       <option value="Done">Done</option>
                     </select>
                     <select
-                      className="bg-zinc-800 text-white"
+                      className="bg-zinc-800 text-white p-2 rounded-md"
                       name="priority"
                       id="priority"
                     >
@@ -58,7 +59,7 @@ const NewWorkItemModal = () => {
                       <option value="Low">Low</option>
                     </select>
                     <select
-                      className="bg-zinc-800 text-white"
+                      className="bg-zinc-800 text-white p-2 rounded-md"
                       name="type"
                       id="type"
                     >

@@ -3,13 +3,22 @@ export const data = [
     id: 1,
     name: "Project 1",
     completed: "52",
-    properties: {
-      title: "fix bugs",
-      status: "To Do",
-      priority: "high",
-      type: "Bug",
-      targetDate: "Oct 17, 2024",
-    },
+    properties: [
+      {
+        title: "fix bugs",
+        status: "To Do",
+        priority: "high",
+        type: "Bug",
+        targetDate: "Oct 17, 2024",
+      },
+      {
+        title: "ananı sikeyim",
+        status: "To Do",
+        priority: "high",
+        type: "Bug",
+        targetDate: "Oct 17, 2024",
+      },
+    ],
   },
   {
     id: 2,

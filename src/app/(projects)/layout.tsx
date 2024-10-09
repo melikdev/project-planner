@@ -1,4 +1,4 @@
-import DashBoardHeader from "@/components/DashboardHeader";
+import DashBoardHeader from "@/app/(projects)/components/DashboardHeader";
 
 type Props = {
   children: React.ReactNode;
