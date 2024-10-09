@@ -20,13 +20,13 @@ const SingleWork = ({ checked, project, setChecked }: Props) => {
               type="checkbox"
             />
             <span>{item.title}</span>
-            <span className="bg-red-500 p-2 w-20 rounded-sm">
+            <span className="bg-red-500 p-2 w-20 rounded-sm text-white">
               {item.status}
             </span>
-            <span className="bg-yellow-500 p-2 w-20  rounded-sm">
+            <span className="bg-yellow-500 p-2 w-20  rounded-sm text-white">
               {item.priority}
             </span>
-            <span className="bg-blue-500 p-2 w-20  rounded-sm">
+            <span className="bg-blue-500 p-2 w-20  rounded-sm text-white">
               {item.type}
             </span>
             <span>{item.targetDate}</span>
@@ -44,13 +44,13 @@ const SingleWork = ({ checked, project, setChecked }: Props) => {
             type="checkbox"
           />
           <span>{project.title}</span>
-          <span className="bg-red-500 p-2 w-20 rounded-sm">
+          <span className="bg-red-500 p-2 w-20 rounded-sm text-white">
             {project.status}
           </span>
-          <span className="bg-yellow-500 p-2 w-20  rounded-sm">
+          <span className="bg-yellow-500 p-2 w-20  rounded-sm text-white">
             {project.priority}
           </span>
-          <span className="bg-blue-500 p-2 w-20  rounded-sm">
+          <span className="bg-blue-500 p-2 w-20  rounded-sm text-white">
             {project.type}
           </span>
           <span>{project.targetDate}</span>

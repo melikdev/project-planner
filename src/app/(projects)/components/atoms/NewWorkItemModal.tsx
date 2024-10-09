@@ -6,6 +6,16 @@ import { useState } from "react";
 const NewWorkItemModal = () => {
   const [show, setShow] = useState(false);
 
+  const closeModalButton = () => {
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setShow(false);
+      }
+    });
+  };
+
+  closeModalButton();
+
   return (
     <div className="flex justify-center items-center z-50">
       <Button
@@ -41,7 +51,7 @@ const NewWorkItemModal = () => {
                   </div>
                   <div className="grid grid-cols-3 gap-2">
                     <select
-                      className="bg-zinc-800 p-2 rounded-md text-white"
+                      className="dark:bg-zinc-800 border-2 p-2 rounded-md "
                       name="status"
                       id="status"
                     >
@@ -50,7 +60,7 @@ const NewWorkItemModal = () => {
                       <option value="Done">Done</option>
                     </select>
                     <select
-                      className="bg-zinc-800 text-white p-2 rounded-md"
+                      className="dark:bg-zinc-800 border-2 p-2 rounded-md"
                       name="priority"
                       id="priority"
                     >
@@ -59,7 +69,7 @@ const NewWorkItemModal = () => {
                       <option value="Low">Low</option>
                     </select>
                     <select
-                      className="bg-zinc-800 text-white p-2 rounded-md"
+                      className="dark:bg-zinc-800 border-2 p-2 rounded-md"
                       name="type"
                       id="type"
                     >
@@ -69,7 +79,7 @@ const NewWorkItemModal = () => {
                     </select>
                   </div>
                 </div>
-                <Button className="mt-4" size="lg">
+                <Button className="mt-4 dark:text-white bg-blue-500" size="lg">
                   Add project
                 </Button>
               </form>

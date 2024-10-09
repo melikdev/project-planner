@@ -1,7 +1,7 @@
 import { EllipsisVertical } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import LoadingState from "./LoadingState";
+import LoadingState from "./atoms/LoadingState";
 
 const SingleProject = ({ project }: { project: any }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,7 +28,7 @@ const SingleProject = ({ project }: { project: any }) => {
           <Link href={`/project/${project.id}`}>
             <div className="space-y-2">
               <h1 className="text-2xl font-bold py-2">{name}</h1>
-              <div className="bg-blue-500 rounded-full text-xs w-14 text-center">
+              <div className="bg-blue-500 rounded-full text-xs w-14 text-center text-white">
                 Building
               </div>
             </div>
@@ -37,7 +37,7 @@ const SingleProject = ({ project }: { project: any }) => {
                 <div>{project?.completed}% completed</div>
                 <div>1/2 Tasks</div>
               </div>
-              <div className="bg-zinc-500 w-full h-2 rounded-full">
+              <div className="dark:bg-zinc-500  border-2 w-full h-3 rounded-full">
                 <div
                   style={{ width: `${completed}%` }}
                   className={`h-2 rounded-full bg-blue-500 `}

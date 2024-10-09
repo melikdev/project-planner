@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { data } from "../../mockData";
 import { useState } from "react";
 import { useParams } from "next/navigation";
-import NewWorkItemModal from "../../components/NewWorkItemModal";
+import NewWorkItemModal from "../../components/atoms/NewWorkItemModal";
 import SingleWork from "../../components/SingleWork";
 
 const Project = () => {

@@ -2,7 +2,7 @@
 
 import { Input } from "@/components/ui/input";
 import ProjectList from "../components/ProjectList";
-import NewProjectModal from "../components/NewProjectModal";
+import NewProjectModal from "../components/atoms/NewProjectModal";
 
 const Projects = () => {
   return (
