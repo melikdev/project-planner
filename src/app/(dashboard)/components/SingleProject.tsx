@@ -1,7 +1,7 @@
-import { EllipsisVertical } from "lucide-react";
+import { ChartBarIncreasing, EllipsisVertical } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import LoadingState from "./atoms/LoadingState";
+import LoadingState from "./atoms/SkeletonLoader";
 
 const SingleProject = ({ project }: { project: any }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +17,7 @@ const SingleProject = ({ project }: { project: any }) => {
   const { completed, name } = project;
 
   return (
-    <div className="dark:bg-zinc-900 h-[180px] p-4 rounded-md relative border-solid border-2">
+    <div className="dark:bg-zinc-900 min-h-[180px] p-4 rounded-md relative border-solid border-2">
       {isLoading ? (
         <LoadingState />
       ) : (
@@ -27,9 +27,9 @@ const SingleProject = ({ project }: { project: any }) => {
           </button>
           <Link href={`/project/${project.id}`}>
             <div className="space-y-2">
-              <h1 className="text-2xl font-bold py-2">{name}</h1>
-              <div className="bg-blue-500 rounded-full text-xs w-14 text-center text-white">
-                Building
+              <div className="flex items-center gap-2 ">
+                <ChartBarIncreasing />
+                <h1 className="text-2xl font-bold py-2">{name}</h1>
               </div>
             </div>
             <div className="flex flex-col gap-4 mt-6">
@@ -42,6 +42,9 @@ const SingleProject = ({ project }: { project: any }) => {
                   style={{ width: `${completed}%` }}
                   className={`h-2 rounded-full bg-blue-500 `}
                 />
+              </div>
+              <div className="bg-blue-500 rounded-full text-xs w-14 text-center text-white animate-pulse">
+                Building
               </div>
             </div>
           </Link>
